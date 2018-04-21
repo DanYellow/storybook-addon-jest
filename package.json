@@ -18,6 +18,7 @@
   ],
   "scripts": {
     "test:example": "jest example --json --outputFile=example/.jest-test-results.json",
+    "coverage:example": "jest --coverage --collectCoverageFrom=\"['example/**/*.js', '!example/.storybook/**/*.js', '!example/withTests.js', '!example/**/*.story.js']\"",
     "clean:storybook": "rm -rf build",
     "prebuild:storybook": "npm run clean:storybook",
     "build:storybook": "build-storybook -c example/.storybook -o build/",
