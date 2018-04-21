@@ -1,8 +1,8 @@
 import React from 'react';
 
-import Indicator from './Indicator';
-import provideTests from '../hoc/provideTests';
-import colors from '../colors';
+import Indicator from '../Indicator';
+import provideTests from '../../hoc/provideTests';
+import colors from '../../colors';
 
 const TestsPanel = ({ tests }) => {
   const style = {

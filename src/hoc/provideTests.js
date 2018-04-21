@@ -17,8 +17,8 @@ const provideTests = Component => {
       this.props.channel.on('storybook/tests/add_tests', this.onAddTests);
     }
 
-    onAddTests({ kind, storyName, tests }) {
-      this.setState({ kind, storyName, tests });
+    onAddTests({ kind, storyName, tests, coverage }) {
+      this.setState({ kind, storyName, tests, coverage });
     }
 
     componentWillUnmount() {

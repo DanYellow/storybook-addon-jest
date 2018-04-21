@@ -1,9 +1,10 @@
 // ---> import { withTests } from 'storybook-addon-jest';
 import withTests from '../dist';
 
-import jestTestResuls from './.jest-test-results.json';
+import jestTestResults from './.jest-test-results.json';
+import coverageResults from '../coverage/coverage-final.json';
 
 
-export default withTests(jestTestResuls, {
+export default withTests({tests: jestTestResults, coverage: coverageResults}, {
   filesExt: '.test.js',
 });
