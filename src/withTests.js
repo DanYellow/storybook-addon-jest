@@ -17,23 +17,26 @@ const findTestResults = (testFiles, jestTestResults, jestTestFilesOptions) =>
 const computeCoverage = (data) => {
   const coverageKeys = [{
     shortNameKey: 's',
-    fullnameKey: 'statements',
-  },{
+    fullnameKey: 'Statements',
+  }, {
     shortNameKey: 'f',
-    fullnameKey: 'functions',
+    fullnameKey: 'Functions / Methods',
+  }, {
+      shortNameKey: 'b',
+      fullnameKey: 'Branches',
   },
-  // {
-  //   shortNameKey: 'b',
-  //   fullnameKey: 'branches',
-  // }
-];
+  {
+    shortNameKey: 's',
+    fullnameKey: 'Lines',
+  }];
 
   const computeCoverage = (arr) => {
-    const sum = Object.values(arr).reduce((sum, current) => {
+    const flattenArr = Object.values(arr).reduce((sum, currentValue) => sum.concat(currentValue), []);
+    const sum = Object.values(flattenArr).reduce((sum, current) => {
       return sum + current;
     })
 
-    return (sum / Object.values(arr).length) * 100;
+    return (sum / Object.values(flattenArr).length) * 100;
   }
 
   const coverageTemp = coverageKeys.map(k => {
