@@ -1,7 +1,7 @@
 import React from 'react';
 
-const provideTests = Component => {
-  class TestProvider extends React.Component {
+const provideTestsAndCoverages = Component => {
+  class TestAndCoverageProvider extends React.Component {
     constructor(props) {
       super(props);
 
@@ -33,7 +33,7 @@ const provideTests = Component => {
     }
   }
 
-  return TestProvider;
+  return TestAndCoverageProvider;
 };
 
-export default provideTests;
+export default provideTestsAndCoverages;

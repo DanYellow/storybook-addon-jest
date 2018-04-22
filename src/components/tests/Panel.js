@@ -1,7 +1,7 @@
 import React from 'react';
 
 import Indicator from '../Indicator';
-import provideTests from '../../hoc/provideTests';
+import provideTestsAndCoverages from '../../hoc/provideTests';
 import colors from '../../colors';
 
 const TestsPanel = ({ tests }) => {
@@ -151,4 +151,4 @@ const TestsPanel = ({ tests }) => {
   );
 };
 
-export default provideTests(TestsPanel);
+export default provideTestsAndCoverages(TestsPanel);
