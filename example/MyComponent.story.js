@@ -6,7 +6,7 @@ import withTests from './withTests';
 import MyComponent from './MyComponent';
 
 storiesOf('MyComponent', module)
-  .addDecorator(withTests('MyComponent'))
+  .addDecorator(withTests('MyComponent', 'list/index'))
   .add('classic render', () => (
     <MyComponent />
   ));

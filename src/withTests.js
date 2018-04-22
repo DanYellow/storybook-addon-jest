@@ -61,7 +61,7 @@ const findCoverageResults = (testFiles, coverageResults) =>
     }
 
     return { fileName, name };
-  })[0];
+  });
 
 const withTests = (results, options) => (...testFiles) => {
   const emitAddTests = ({ kind, story }) => {
